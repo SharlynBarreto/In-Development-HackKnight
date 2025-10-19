@@ -4,6 +4,13 @@ import Map from '../components/Map';
 import { mockProperties } from '../data/mockProperties';
 import { motion, AnimatePresence } from 'framer-motion';
 
+/**
+ * Use Emojis for viewer retention
+ * Utilize color coding for ROI rankings
+ * Consistent rounded design elements
+ * Smooth animations with framer-motion
+ */
+
 const API_BASE_URL = 'http://localhost:8787';
 
 const AVAILABLE_LOCATIONS = [

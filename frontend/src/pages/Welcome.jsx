@@ -86,7 +86,7 @@ export default function Welcome() {
               </div>
             </motion.h1>
             <motion.h6
-              className="text-xl text-white mt-6 text-center max-w-2xl drop-shadow-lg"
+              className="text-3xl text-white mt-6 text-center max-w-2xl drop-shadow-lg"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: prefersReduced ? 0 : 1.2, ease, delay: 0.8 }}
