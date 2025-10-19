@@ -15,11 +15,16 @@ export async function searchProperties(filters = {}) {
   }
 }
 
+
+
 export async function getProperty(propertyId) {
   try {
-    const property = getPropertyById(propertyId);
+    // Ensure we're comparing strings
+    const property = getPropertyById(String(propertyId));
     
     if (!property) {
+      console.log('Property not found for ID:', propertyId);
+      console.log('Available IDs:', MOCK_PROPERTIES.map(p => p.id));
       throw new Error('Property not found');
     }
     

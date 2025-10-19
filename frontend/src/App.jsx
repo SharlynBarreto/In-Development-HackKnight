@@ -1,14 +1,17 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home.jsx';
-import Welcome from './pages/Welcome.jsx';
-import Search from './pages/Search.jsx';
-import Info from './pages/Info.jsx';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Welcome from './pages/Welcome';
+import Home from './pages/Home';
 
 function App() {
   return (
-    <Welcome></Welcome>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Welcome />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
 export default App;
-
